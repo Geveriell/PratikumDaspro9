@@ -5,19 +5,22 @@ public class ArrayRataNilai07 {
 
         Scanner sc = new Scanner(System.in);
 
-        int[] nilaiMhs = new int[10];
+        // Tambahan: input jumlah elemen array dari pengguna
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlah = sc.nextInt();
+
+        int[] nilaiMhs = new int[jumlah];
         double total = 0;
         double rata2;   
-        int lulus = 0; // Tambahan: untuk menghitung mahasiswa dengan nilai > 70
+        int tidakLulus = 0;
 
         // Input nilai mahasiswa
         for (int i = 0; i < nilaiMhs.length; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + i + " : ");
             nilaiMhs[i] = sc.nextInt();
 
-            // Tambahan: cek apakah mahasiswa lulus
-            if (nilaiMhs[i] > 70) {
-                lulus++;
+            if (nilaiMhs[i] <= 70) {
+                tidakLulus++;
             }
         }
 
@@ -32,8 +35,7 @@ public class ArrayRataNilai07 {
         // Menampilkan hasil rata-rata
         System.out.println("Rata-rata nilai = " + rata2);
 
-        // Tambahan: menampilkan jumlah mahasiswa yang lulus (>70)
-        System.out.println("Jumlah mahasiswa yang lulus : " + lulus);
+        System.out.println("Jumlah mahasiswa yang tidak lulus : " + tidakLulus);
 
         sc.close();
     }
