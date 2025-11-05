@@ -1,9 +1,8 @@
 public class ArrayBilangan07 {
     public static void main(String[] args) {
-
-        // Inisialisasi langsung
         int[] bil = {5, 13, -7, 17};
 
+        //perulangan for
         for (int i = 0; i < 4; i++) {
             System.out.println(bil[i]);
         }
