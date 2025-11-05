@@ -1,3 +1,5 @@
+//modifikasi
+
 import java.util.Scanner;
 
 public class ArrayNilai07 {
